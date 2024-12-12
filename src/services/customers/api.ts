@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://northwind.falahrafi.com/api.php/records/customers';
+const API_BASE_URL = 'https://retoolapi.dev/9jSbsD/customers';
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
@@ -8,7 +8,7 @@ export const api = axios.create({
 
 export const fetchCustomers = async () => {
   const response = await api.get('/');
-  return response.data.records;
+  return response.data;
 };
 
 export const fetchCustomerById = async (id: number) => {
